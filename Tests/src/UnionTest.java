@@ -5,6 +5,7 @@ public class UnionTest {
 
 	private Vector<Integer> V1;
 	private Vector<Integer> V2;
+	private Vector<Integer> vectorUnion;
 	//Set up - Called before every test method
 	@Before
 	public void setUp() 
@@ -22,5 +23,15 @@ public class UnionTest {
 			return;
 		}
 		fail("NullPointerException Expected");
+	}
+	
+	@Test
+	public void testElementosRepetidos()
+	{
+		V1.add(1);
+		V2.add(1);
+		
+		this.vectorUnion = Union.union(V1, V2);
+		assertEquals(1,vectorUnion.size());
 	}
 }
