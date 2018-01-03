@@ -33,5 +33,17 @@ public class UnionSetTest {
 		setUnion = Union.unionSet(S1,S2);
 		assertEquals(setUnion.size(),S1.size());
 	}
+	
+	@Test
+	(expected = NullPointerException.class)
+	public void elementosNulos()
+	{
+		try {
+			setUnion = Union.unionSet(S1, S2);
+		}catch(NullPointerException e) {
+			return;
+		}
+		fail("NullPointerException Expected");
+	}
 }
 

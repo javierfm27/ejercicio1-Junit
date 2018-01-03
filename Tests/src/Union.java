@@ -25,13 +25,24 @@ public class Union {
 	*/
 	public static Set unionSet (Set a, Set b)
 	{
-		return null;
+		if(a.isEmpty() || b.isEmpty()) {
+			throw new NullPointerException("Union.unionSet");
+		}
+		a.addAll(b);
+		return a;
 	}
 	
 	public static void main(String[] args) {
 		Vector<Integer> vector1 = new Vector<Integer>();
 		Vector<Integer> vector2 = new Vector<Integer>();
 		
-		Vector<Integer> vectorUnion = union(vector1,vector2);
+		//Vector<Integer> vectorUnion = union(vector1,vector2);
+		
+		//Prueba del Set
+		Set<Integer> s1 = new HashSet<Integer>();
+		Set<Integer> s2 = new HashSet<Integer>();
+		
+		Set<Integer> setUnion = unionSet(s1,s2);
+		System.out.println(setUnion.isEmpty());
 	}
 }
