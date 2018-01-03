@@ -34,4 +34,17 @@ public class UnionTest {
 		this.vectorUnion = Union.union(V1, V2);
 		assertEquals(1,vectorUnion.size());
 	}
+	
+	@Test
+	public void oneVectorEmpty()
+	{
+		this.V2 = null;
+		this.V1.add(1);
+		try {
+			this.vectorUnion = Union.union(V1, V2);
+		}catch(NullPointerException e) {
+			return;
+		}
+		fail("NullPointerException Expected");
+	}
 }
