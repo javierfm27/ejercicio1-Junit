@@ -62,6 +62,5 @@ public class UnionSetTest {
 		assertEquals(S3,unionVector);
 	}
 
-	
 }
 
