@@ -45,5 +45,23 @@ public class UnionSetTest {
 		}
 		fail("NullPointerException Expected");
 	}
+	
+	@Test
+	public void numTest() {
+		Set<Object> S3 = new HashSet<>();
+		
+		S1.add(1);
+		S1.add(4);
+		S2.add(5);
+		S2.add(9);
+		S3.add(1);
+		S3.add(4);
+		S3.add(5);
+		S3.add(9);
+		Set<Integer> unionVector = Union.unionSet(S1, S2);
+		assertEquals(S3,unionVector);
+	}
+
+	
 }
 
